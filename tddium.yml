@@ -1,7 +1,11 @@
 :tddium:
  :python:
    :python_version: 2.7
-   :pip_requirements_file: requirements.txt
+#   :pip_requirements_file: requirements.txt
  :tests:
- - type: nosetests
-   mode: basic
+# - type: nosetests
+#   mode: basic
+ - :type: custom
+   :command: python -m unittest discover -p '*_test.py'
+   :invocation: single
+   :output: exit-status
